@@ -44,10 +44,12 @@ class NewsApiService {
 							.querySelector(".gallery")
 							.firstElementChild.getBoundingClientRect();
 
-					window.scrollBy({
-						top: cardHeight * 2,
-						behavior: "smooth",
-					});
+				setTimeout(() => {
+						window.scrollBy({
+							top: cardHeight / 2,
+							behavior: "smooth",
+						})
+					}, 1000);
 				function onContentList(event) {
 					event.preventDefault();
 					const target = event.target;
